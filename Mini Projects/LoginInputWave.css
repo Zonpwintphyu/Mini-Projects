@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: rgb(246, 198, 126);
+    color: rgb(140, 19, 153);
+    height: 100vh;
+}
+
+.container{
+    background-color:rgb(235, 178, 253);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border-color: rgb(71, 232, 247);
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a{
+    text-decoration: none;
+    color: brown;
+}
+
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid rgb(193, 85, 243);
+    display:block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: rgb(57, 7, 103);
+}
+
+.form-control input:focus, .form-control input:valid{
+    outline:0;
+    border-bottom-color:bisque;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(196, 141, 248);
+    padding: 15px;
+    font-family:   sans-serif;
+    font-size: 16px;
+    border: 0;
+    border-radius: 10px;
+
+}
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:hover{
+    background-color: blueviolet;
+    
+}
+
+.btn:focus{
+    outline:0;
+}
+
+.text{
+    margin-top: 30px;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: blanchedalmond;
+    transform: translateY(-30px);
+}

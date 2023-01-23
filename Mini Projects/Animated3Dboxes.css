@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+.magic{
+    background-color: rgb(148, 95, 247);
+    color: rgb(251, 157, 42);
+    font-family: 'Poppins';
+    border: 0;
+    border-radius: 7px;
+    font-size: 20px;
+    padding: 12px 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 500;
+    box-shadow: 4px 4px rgb(200, 135, 252);
+    z-index: 100;
+}
+.boxes{
+    height: 500px ;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: 0.4s ease;
+}
+.boxes.big{
+    width:600px;
+    height:600px;
+
+}
+.boxes.big .box{
+    transform: rotateZ(360deg);
+}
+.box{
+    background-image : url('https://64.media.tumblr.com/6c33eb055e8b0031270bc1b6fde34e01/tumblr_naxrw5aMHi1rwfctbo1_1280.gifv');
+    height: 125px;
+    width: 125px;
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    position: relative;
+    transition: 0.4s ease;
+    
+}
+.magic:focus{
+    outline: none;
+}
+.magic:active{
+    box-shadow: none;
+    transform: translateY(2px);
+}
+.box::after{
+    content: '';
+    background-color: rgb(155, 84, 255);
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform:skewY(45deg)
+}
+
+.box::before{
+    content: '';
+    background-color: rgb(204, 142, 254);
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform:skewX(45deg)
+}
